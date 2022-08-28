@@ -7,7 +7,6 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
-import org.apache.commons.logging.Log;
 
 public class OrderApp {
     public static void main(String[] args) {
@@ -22,6 +21,7 @@ public class OrderApp {
         //order서비스에서 createOder를 함. 그럼 order가 생성됨.
         Order order = orderService.createOreder(memberId, "itemA", 10000);
 
-        System.out.println("order = "+ order);
+        System.out.println("order = " + order);
+        System.out.println("order.calculatePrice = " + order.calculatePrice());
     }
 }
